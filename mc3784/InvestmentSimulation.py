@@ -18,7 +18,7 @@ class InvestmentSimulation:
     def processInput(self):
         """
         Validate the user input: The first input has to be a List of strictly positive integer numbers, 
-        and the second a stricly positive integer number.  
+        and the second a strictly positive integer number.  
         """
         try:
             positionsInput = raw_input("Write a list of the number of shares to buy in parallel: (not more than 1000)")   
@@ -28,7 +28,7 @@ class InvestmentSimulation:
                 self.validateIntegerInput(pos)    
                 oneBetAmount = 1000. / int(pos)
                 if not float(oneBetAmount).is_integer():
-                    erroMessage="The number in the list have to divisors of 1000"
+                    erroMessage="The number in the list must be a divisors of 1000"
                     raise NotValidInput(erroMessage)                  
                     self.printUsageMessage()
                     sys.exit()
@@ -130,7 +130,11 @@ class InvestmentSimulation:
             return 2
         else:
             return 0
+        
     def printUsageMessage(self):
+        """
+        Print an USAGE message for the user
+        """
         print "USAGE:"
         print "The first input has to be a a list of positive defined integer number enclosed in square brackets, and each number have to be a divisor of 1000"
         print "Example for the first input: [1,10,100,1000]"

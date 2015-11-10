@@ -1,3 +1,9 @@
+'''
+Created on Nov 10, 2015
+
+@author: Michele Ceru (mc3784)
+'''
+
 import InvestmentSimulation as invSim     
 import os, errno
 
